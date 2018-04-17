@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ywcx</groupId>
-	<artifactId>priceserver-springboot</artifactId>
+	<artifactId>priceserver</artifactId>
 	<version>1.0_A0</version>
 	<packaging>jar</packaging>
 
