@@ -8,4 +8,5 @@ import com.ywcx.price.entity.PriceBase;
 
 public interface PriceBaseDao extends JpaRepository<PriceBase, Integer> {
 	List<PriceBase> findByType(String type);
+	List<PriceBase> findByCityAndType(String city, String type);
 }

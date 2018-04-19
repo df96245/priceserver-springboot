@@ -1,5 +1,6 @@
 package com.ywcx.price.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +21,8 @@ public class PriceBase {
 	private Double outOfRangeFeePreKm;
 	private Double midnightFeePreKm;
 	private String type;
+	@Column(name="discount",nullable=false,columnDefinition="double(1) default 1.1")
+	private Double discount; 
 	
 	public Integer getId() {
 		return id;
@@ -81,12 +84,18 @@ public class PriceBase {
 	public void setType(String type) {
 		this.type = type;
 	}
+	public Double getDiscount() {
+		return discount;
+	}
+	public void setDiscount(Double discount) {
+		this.discount = discount;
+	}
 	@Override
 	public String toString() {
 		return "PriceBase [id=" + id + ", city=" + city + ", city_desc=" + city_desc + ", startKm=" + startKm
-				+ ", startFee=" + startFee + ", feePreKm=" + feePreKm + ", lowSpeedFeePreKm=" + lowSpeedFeePreMin
+				+ ", startFee=" + startFee + ", feePreKm=" + feePreKm + ", lowSpeedFeePreMin=" + lowSpeedFeePreMin
 				+ ", outOfRangeFeePreKm=" + outOfRangeFeePreKm + ", midnightFeePreKm=" + midnightFeePreKm + ", type="
-				+ type + "]";
+				+ type + ", discount=" + discount + "]";
 	}
 	
 }

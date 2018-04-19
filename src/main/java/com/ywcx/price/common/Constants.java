@@ -12,11 +12,17 @@ public class Constants {
 	
 	public static final String GEO_CODER="http://api.map.baidu.com/geocoder/v2/";
 
-	
+	//BAIDU ERROR RESPONSE MESSAGE
+	public static final int   ERROR_CODE_TWO=2;
+	public static final String ILLEAGLE_AGUMENT="参数错误";
+	public static final String OUT_OF_CALL="天配额超限，限制访问";
 	public static final String OUT_TIME_RANGE="起始和结束时间必须在24小时之内";
 	public static final String OVER_RETRY_TIMES="重试次数超过限制，请重新尝试。";
+	public static final String ILLEAGLE_TIMESTAM="最小值是1;最大值是2147483647";
 	
-	public static final Double ILLEGALE_AGUMENT=-2.0;
-	public static final Double INCORRECT_STATUS=-1.0;
+	//ENCODER
+	public static final String UTF_8="UTF-8";
+	
+	
 	
 }

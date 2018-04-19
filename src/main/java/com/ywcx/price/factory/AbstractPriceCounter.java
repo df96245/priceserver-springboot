@@ -2,7 +2,7 @@ package com.ywcx.price.factory;
 
 import com.ywcx.price.entity.MileageBase;
 
-public abstract class PriceCounter {
+public abstract class AbstractPriceCounter {
 	
 	public abstract Double callPrice(Double distance,String city,Double lowSpeedMin);
 	

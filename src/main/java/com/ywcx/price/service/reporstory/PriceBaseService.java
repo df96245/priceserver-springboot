@@ -29,4 +29,10 @@ public class PriceBaseService {
 	public List<PriceBase> getAllPriceBaseByType(String type){
 		return dao.findByType(type.toUpperCase());
 	}
+	
+	public PriceBase getPriceBaseByCityAndType(String city,String type) {
+		return dao.findByCityAndType(city, type).get(0);
+		
+	}
+	
 }

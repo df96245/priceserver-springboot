@@ -1,6 +1,7 @@
 package com.ywcx.price.util;
 
 import java.text.SimpleDateFormat;
+import java.time.Clock;
 import java.util.Date;
 
 import org.slf4j.Logger;
@@ -40,6 +41,9 @@ public class DateUtil {
 	}
 	
 	public static Long getCurrentTimeSec() {
-		return System.currentTimeMillis()/1000;
+		return Clock.systemDefaultZone().millis()/1000;
+	}
+	public static Long getCurrentTimeMill() {
+		return Clock.systemDefaultZone().millis();
 	}
 }

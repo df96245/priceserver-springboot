@@ -14,14 +14,14 @@ import org.springframework.stereotype.Component;
 import com.ywcx.price.common.Constants;
 import com.ywcx.price.entity.MileageBase;
 import com.ywcx.price.entity.PriceBase;
-import com.ywcx.price.factory.PriceCounter;
+import com.ywcx.price.factory.AbstractPriceCounter;
 import com.ywcx.price.processor.PriceCalculator;
 import com.ywcx.price.service.reporstory.PriceBaseService;
 import com.ywcx.price.util.NumberUtil;
 
 @Component
-public class SelfPriceCounter extends PriceCounter {
-	private Logger logger = LoggerFactory.getLogger(PriceCounter.class);
+public class SelfPriceCounter extends AbstractPriceCounter {
+	private Logger logger = LoggerFactory.getLogger(AbstractPriceCounter.class);
 	
 	public static Map<String, PriceBase> selfMap= new HashMap<String, PriceBase>();
 	

@@ -20,7 +20,7 @@ public class PriceCounterFactory {
 		typeList.add(Constants.SELF_CAR);
 	}
 	
-	public static PriceCounter getPriceCounter(String type) {
+	public static AbstractPriceCounter getPriceCounter(String type) {
 		if (type.trim().equals(Constants.SELF_CAR)) {
 			return new SelfPriceCounter();
 		}

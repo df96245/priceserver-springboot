@@ -14,6 +14,11 @@ public class HttpConf {
 	private Integer retryTimes;
 	@Value("${http.retry.interval}")
 	private Integer retryInterval;
+	@Value("${http.connection.max.total}")
+	private Integer maxTotal;
+	@Value("${http.default.max.pre.route}")
+	private Integer defaultMaxPerRoute;
+	
 
 	public Integer getSocketTimeout() {
 		return socketTimeout;
@@ -45,6 +50,22 @@ public class HttpConf {
 
 	public void setRetryInterval(Integer retryInterval) {
 		this.retryInterval = retryInterval;
+	}
+
+	public Integer getMaxTotal() {
+		return maxTotal;
+	}
+
+	public void setMaxTotal(Integer maxTotal) {
+		this.maxTotal = maxTotal;
+	}
+
+	public Integer getDefaultMaxPerRoute() {
+		return defaultMaxPerRoute;
+	}
+
+	public void setDefaultMaxPerRoute(Integer defaultMaxPerRoute) {
+		this.defaultMaxPerRoute = defaultMaxPerRoute;
 	}
 
 }
