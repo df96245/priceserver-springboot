@@ -16,8 +16,7 @@ public class TrackService extends BaiduAbstractService {
 	private static boolean useAsyn = true;
 
 	public String getDistance(String entityName, String start_time, String end_time) {
-		// calculate final distance if end_time isn't blank , otherwise calculate real
-		// time price.
+		// calculate final distance if end_time isn't blank , otherwise calculate real time price.
 		String et = StringUtils.isBlank(end_time) ? DateUtil.getCurrentTimeSec().toString() : end_time;
 		String result = "";
 		try {

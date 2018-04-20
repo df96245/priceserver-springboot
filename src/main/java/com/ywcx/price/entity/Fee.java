@@ -74,7 +74,7 @@ public class Fee{
 				+ "]";
 	}
 
-	public Double getAllFee() {
+	public Double getTotalFee() {
 		logger.info("Fee [mileageFee=" + mileageFee + ", lowSpeedFee=" + lowSpeedFee
 				+ ", higthWayFee=" + higthWayFee + ", midNightFee=" + midNightFee + ", outOfRangeFee=" + outOfRangeFee
 				+ "]");

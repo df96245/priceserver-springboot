@@ -21,7 +21,7 @@ public class PriceBase {
 	private Double outOfRangeFeePreKm;
 	private Double midnightFeePreKm;
 	private String type;
-	@Column(name="discount",nullable=false,columnDefinition="double(1) default 1.1")
+	@Column(name="discount",columnDefinition="DOUBLE default 1")
 	private Double discount; 
 	
 	public Integer getId() {

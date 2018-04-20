@@ -7,10 +7,6 @@ import com.ywcx.price.util.NumberUtil;
 
 public class PriceCalculator {
 	
-	/*public static Double estimatePrice() {
-		
-	}*/
-	
 	public static Double calAllPrice(PriceBase priceBase, MileageBase mileageBase, Double lowSpeedMin) {
 		
 		Double higthWayFee=0.0;
@@ -26,7 +22,7 @@ public class PriceCalculator {
 		.buildMidNightFee(midnightFee)
 		.buildMileageFee(mileageFee)
 		.buildOutOfRangeFee(outOfRangeFee);
-		return fee.getAllFee();
+		return fee.getTotalFee();
 	}
 	
 	public static Double calEstimatePrice(PriceBase priceBase, MileageBase mileageBase) {
